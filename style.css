@@ -1,0 +1,108 @@
+/* Base styles for desktop */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5; /* Light gray for desktop */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card layout */
+.menu-card {
+  display: flex;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+  flex-direction: row;
+}
+
+/* Image styling */
+.menu-card img {
+  width: 50%;
+  object-fit: cover;
+}
+
+/* Content styling */
+.menu-card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Heading */
+.menu-card-content h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Description */
+.menu-card-content p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Price section */
+.price-section {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #047857;
+}
+
+.old-price {
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+/* Button styling */
+.btn-primary {
+  padding: 12px;
+  background-color: #047857;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #065f46;
+  transform: translateY(-2px);
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  body {
+    background-color: #e0f7fa; /* Soft blue for mobile */
+  }
+
+  .menu-card {
+    flex-direction: column;
+    max-width: 90%;
+  }
+
+  .menu-card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-card-content {
+    padding: 16px;
+  }
+}
